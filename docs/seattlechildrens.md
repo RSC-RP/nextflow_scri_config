@@ -51,11 +51,20 @@ module load singularity
 ```groovy
 //To list all the projects you are authorized on HPC.
 project info
+
+// example output
+// $ project info 
+//                           project name                         project code expiration date
+// 0                            AutismR21 ad1ba643-36a1-4566-a48d-e5026e436acc      2024-05-31
+// 1                   Ewing sarcoma BETi 6fc9cae4-6f28-404a-bd7d-7d8a9bc868d1      2024-06-30
+// ... 
 ```
+
+
 ```groovy
 //It will list all the project names, project codes and expiration dates.
 //Example Interactive Job with 4GB Memory:
-qsub -I -q freeq -l select=1:ncpus=1:mem=4g -l walltime=1:00:00 -P [PROJECT CODE]
+qsub -I -q freeq -l select=1:ncpus=1:mem=4g -l walltime=1:00:00 -P [PROJECT CODE] 
 qsub -I -q freeq -l select=1:ncpus=1:mem=4g -l walltime=1:00:00 -P $(project code [PROJECT NAME])
 
 //For more details, use project info --detail
