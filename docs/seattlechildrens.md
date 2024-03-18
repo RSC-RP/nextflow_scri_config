@@ -5,9 +5,9 @@ All nf-core pipelines have been successfully configured for use on the the Cyber
 To use, run the pipeline with `-profile PROFILENAME`. This will download and launch the [`seattlechildrens.config`](../conf/seattlechildrens.config) which has been pre-configured with a setup suitable for the Cybertron cluster at SCRI. Using this profile, a docker image containing all of the required software will be downloaded, and converted to a Singularity image before execution of the pipeline.
 
 # Below are non-mandatory information 
-Before running the pipeline you will need to create a Nextflow environment on `mamba`. You might also load _Singularity_ using the environment module system on Cybertron. 
+Before running the pipeline you will need to create a Nextflow environment on `mamba`. You can load _Singularity_ using the environment module system on Cybertron. 
 
-## Create Nextflow environment on `mamba`
+## Create a Nextflow environment on `mamba`
 
 1. Create _nextflow.yml_ file containing the following content 
 
