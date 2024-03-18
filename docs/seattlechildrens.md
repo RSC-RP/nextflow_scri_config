@@ -7,7 +7,7 @@ To use, run the pipeline with `-profile PROFILENAME`. This will download and lau
 # project info
 This config file is created for the use on the Cybertron HPC at Seattle Children Research Institude (SCRI), Seattle, WA. Using this config will pre-configure a set up suitable for the Cybertron HPC. The Singularity images will be downloaded to run on the cluster. The nextflow pipeline should be executed inside of the Cybertron system.
 
-# Below are non-mandatory information 
+# Below are mandatory information SCRI
 Before running the pipeline you will need to create a Nextflow environment on `mamba`. You can load _Singularity_ using the environment module system on Cybertron. 
 
 ## Create a Nextflow `mamba` environment 
