@@ -1,3 +1,7 @@
+
+# project info
+This config file is created for the use on the Cybertron HPC at Seattle Children Research Institude (SCRI), Seattle, WA. Using this config will pre-configure a set up suitable for the Cybertron HPC. The Singularity images will be downloaded to run on the cluster. The nextflow pipeline should be executed inside of the Cybertron system.
+
 # nf-core/configs: PROFILE Configuration
 
 All nf-core pipelines have been successfully configured for use on the the Cybertron HPC at Seattle Children Research Institude (SCRI), Seattle, WA.
@@ -43,5 +47,19 @@ Make sure that channel priority is set to flexible using the following comments:
 ml singularity/3.9.9
 ```
 
+4. HPC projects information
 
+```groovy
+//To list all the projects you are authorized on HPC.
+project info
+```
+```groovy
+//It will list all the project names, project codes and expiration dates.
+//Example Interactive Job with 4GB Memory:
+qsub -I -q freeq -l select=1:ncpus=1:mem=4g -l walltime=1:00:00 -P [PROJECT CODE]
+qsub -I -q freeq -l select=1:ncpus=1:mem=4g -l walltime=1:00:00 -P $(project code [PROJECT NAME])
+
+//For more details, use project info --detail
+```
+You can find more information about computational resources [here](https://child.seattlechildrens.org/research/center_support_services/research_informatics/research_scientific_computing/high_performance_computing_core/).
 
