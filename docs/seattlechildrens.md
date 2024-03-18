@@ -7,9 +7,9 @@ To use, run the pipeline with `-profile PROFILENAME`. This will download and lau
 # Below are non-mandatory information 
 Before running the pipeline you will need to create a Nextflow environment on `mamba`. You can load _Singularity_ using the environment module system on Cybertron. 
 
-## Create a Nextflow environment on `mamba`
+## Create a Nextflow `mamba` environment 
 
-1. Create _nextflow.yml_ file containing the following content 
+1. Create _nextflow.yml_ file containing the following content. This YAML file can be utilized to set up a mamba environment, specifying both the version of Nextflow and the environment name.
 
 ```yaml
 name: nextflow
@@ -22,7 +22,9 @@ dependencies:
   - nf-core==2.10
   - graphviz
 ```
-2. Create the _Nextflow_ environment on `manba`
+
+2. Create the _Nextflow_ `mamba` environment
+
 ```bash
 > mamba env create -f nextflow.yaml
 ```
