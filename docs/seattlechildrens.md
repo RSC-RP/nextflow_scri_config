@@ -12,7 +12,6 @@ qsub -I -q freeq -l select=1:ncpus=1:mem=4g -l walltime=1:00:00 -P [PROJECT CODE
 qsub -I -q freeq -l select=1:ncpus=1:mem=4g -l walltime=1:00:00 -P $(project code [PROJECT NAME])
 
 //For more details, use project info --detail
-
-You can find more information about computational resources [here](https://child.seattlechildrens.org/research/center_support_services/research_informatics/research_scientific_computing/high_performance_computing_core/).
 ```
+You can find more information about computational resources [here](https://child.seattlechildrens.org/research/center_support_services/research_informatics/research_scientific_computing/high_performance_computing_core/).
 
