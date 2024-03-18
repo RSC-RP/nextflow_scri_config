@@ -2,7 +2,7 @@
 
 All nf-core pipelines have been successfully configured for use on the the Cybertron HPC at Seattle Children Research Institude (SCRI), Seattle, WA.
 
-To use, run the pipeline with `-profile PROFILENAME`. This will download and launch the [`seattlechildrens.config`](../conf/seattlechildrens.config) which has been pre-configured with a setup suitable for the Cybertron cluster at SCRI. Using this profile, a docker image containing all of the required software will be downloaded, and converted to a Singularity image before execution of the pipeline.
+To use, run the pipeline with `-profile PROFILENAME`. This will download and launch the pipeline using [`seattlechildrens.config`](../conf/seattlechildrens.config) which has been pre-configured with a setup suitable for the Cybertron cluster at SCRI. Using this profile, a container with all of the required software will be downloaded.
 
 # project info
 This config file is created for the use on the Cybertron HPC at Seattle Children Research Institude (SCRI), Seattle, WA. Using this config will pre-configure a set up suitable for the Cybertron HPC. The Singularity images will be downloaded to run on the cluster. The nextflow pipeline should be executed inside of the Cybertron system.
