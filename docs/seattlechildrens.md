@@ -26,7 +26,13 @@ dependencies:
   - graphviz
 ```
 
-2. Setting channel priority
+2. Create the _Nextflow_ `mamba` environment
+
+```bash
+> mamba env create -f nextflow.yaml
+```
+
+3. Setting channel priority
 Make sure that channel priority is set to flexible using the following comments:
 
 ```bash
@@ -34,11 +40,7 @@ Make sure that channel priority is set to flexible using the following comments:
 > mamba config --set channel_priority flexible # set to flexible if not already done
 ```
 
-3. Create the _Nextflow_ `mamba` environment
 
-```bash
-> mamba env create -f nextflow.yaml
-```
 
 
 You can find more information about computational resources [here](https:#child.seattlechildrens.org/research/center_support_services/research_informatics/research_scientific_computing/high_performance_computing_core/). You have to be an employee of SCRI to access the link. 
