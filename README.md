@@ -31,13 +31,30 @@ nextflow run -c 'conf/seattlechildrens.config' \
     --validationSchemaIgnoreParams 'queue,project'
 
 # For executing the jobs on the HPC cluster with singularity containers
+# doesn't work due to bioconductor-dupradar:1.28.0--r42hdfd78af_0
 nextflow run -c 'conf/seattlechildrens.config' \
     nf-core/rnaseq \
     -r 3.14.0 \
     -profile test,PBS_singularity \
+    --max_memory 32.GB \
     --outdir "/home/$USER/temp/nf-core-rnaseq-test" \
     --project "207f23bf-acb6-4835-8bfe-142436acb58c" \
     --validationSchemaIgnoreParams 'queue,project'
+```
+
+```bash
+# doesnt work due to wget: unable to resolve host address 'ftp.sra.ebi.ac.uk'
+nextflow -c 'conf/seattlechildrens.config' \
+    run nf-core/fetchngs \
+    -r 1.12.0 \
+    -profile test,PBS_singularity \
+    --input ids.csv \
+    --project "207f23bf-acb6-4835-8bfe-142436acb58c" \
+    --outdir "/home/$USER/fetchngs"
+```
+
+```
+nf-core launch nf-core/methylseq -r 2.6.0
 ```
 
 
