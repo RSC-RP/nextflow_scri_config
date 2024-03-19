@@ -42,6 +42,8 @@ Make sure that channel priority is set to flexible using the following comments:
 ```
 
 4. Running 
+Please look into [RSC-RP/nextflow_scri_config](https://github.com/RSC-RP/nextflow_scri_config) for details.
+
 ```
 # activate conda/mamba env
 mamba activate nextflow
