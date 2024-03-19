@@ -43,7 +43,6 @@ nextflow run -c 'conf/seattlechildrens.config' \
 ```
 
 ```bash
-# doesnt work due to wget: unable to resolve host address 'ftp.sra.ebi.ac.uk'
 nextflow run -c 'conf/seattlechildrens.config' \
     nf-core/fetchngs \
     -r 1.12.0 \
