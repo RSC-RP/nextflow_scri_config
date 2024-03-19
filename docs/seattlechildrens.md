@@ -41,8 +41,17 @@ Make sure that channel priority is set to flexible using the following comments:
 > mamba env create -f nextflow.yaml
 ```
 
+4. Running 
+```
+# activate conda/mamba env
+mamba activate nextflow
 
-
+# running nextflow pipeline example (please replace with your own project code and module)
+nextflow run -c 'conf/seattlechildrens.config' \
+    [nf-core/module_name] \
+    -profile test,PBS_singularity \
+    --project ["your_project_code"] \
+```
 
 You can find more information about computational resources [here](https:#child.seattlechildrens.org/research/center_support_services/research_informatics/research_scientific_computing/high_performance_computing_core/). You have to be an employee of SCRI to access the link. 
 
