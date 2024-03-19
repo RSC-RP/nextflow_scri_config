@@ -26,18 +26,19 @@ dependencies:
   - graphviz
 ```
 
-2. Create the _Nextflow_ `mamba` environment
-
-```bash
-> mamba env create -f nextflow.yaml
-```
-
-3. Setting channel priority
+2. Setting channel priority
 Make sure that channel priority is set to flexible using the following comments:
 
 ```bash
 > mamba config --describe channel_priority # print your current conda settings
 > mamba config --set channel_priority flexible # set to flexible if not already done
+```
+
+
+3. Create the _Nextflow_ `mamba` environment
+
+```bash
+> mamba env create -f nextflow.yaml
 ```
 
 
