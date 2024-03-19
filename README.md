@@ -43,19 +43,16 @@ nextflow run -c 'conf/seattlechildrens.config' \
 ```
 
 ```bash
-# doesnt work due to wget: unable to resolve host address 'ftp.sra.ebi.ac.uk'
-nextflow -c 'conf/seattlechildrens.config' \
-    run nf-core/fetchngs \
+nextflow run -c 'conf/seattlechildrens.config' \
+    nf-core/fetchngs \
     -r 1.12.0 \
     -profile test,PBS_singularity \
-    --input ids.csv \
+    --input ./ids.csv \
+    --download_method 'sratools' \
     --project "207f23bf-acb6-4835-8bfe-142436acb58c" \
-    --outdir "/home/$USER/fetchngs"
+    --outdir "/home/$USER/temp/nf-core-fetchngs"
 ```
 
-```
-nf-core launch nf-core/methylseq -r 2.6.0
-```
 
 
 ### Change log
