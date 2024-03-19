@@ -16,6 +16,8 @@ singularity {
 
 ### Test the config file 
 
+Please note that `--project` parameter can be specified on the command line in `nextflow run` or in the `seattlechildrens.config`. 
+
 ```bash
 ml singularity
 
@@ -24,7 +26,8 @@ nextflow run -c 'conf/seattlechildrens.config' \
     nf-core/rnaseq \
     -r 3.14.0 \
     -profile test,local_singularity \
-    --outdir "~/temp"
+    --outdir "/home/$USER/temp/nf-core-rnaseq-test" \
+    --project "207f23bf-acb6-4835-8bfe-142436acb58c" \
     --validationSchemaIgnoreParams 'queue,project'
 
 # For executing the jobs on the HPC cluster with singularity containers
@@ -32,7 +35,8 @@ nextflow run -c 'conf/seattlechildrens.config' \
     nf-core/rnaseq \
     -r 3.14.0 \
     -profile test,PBS_singularity \
-    --outdir "~/temp" \
+    --outdir "/home/$USER/temp/nf-core-rnaseq-test" \
+    --project "207f23bf-acb6-4835-8bfe-142436acb58c" \
     --validationSchemaIgnoreParams 'queue,project'
 ```
 
