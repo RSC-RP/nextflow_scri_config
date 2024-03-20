@@ -21,28 +21,6 @@ Please note that `--project` parameter can be specified on the command line in `
 ```bash
 ml singularity
 
-# For running on an interactive session on cybertron with singularity module loaded
-nextflow run -c 'conf/seattlechildrens.config' \
-    nf-core/rnaseq \
-    -r 3.14.0 \
-    -profile test,local_singularity \
-    --outdir "/home/$USER/temp/nf-core-rnaseq-test" \
-    --project "207f23bf-acb6-4835-8bfe-142436acb58c" \
-    --validationSchemaIgnoreParams 'queue,project'
-
-# For executing the jobs on the HPC cluster with singularity containers
-# doesn't work due to bioconductor-dupradar:1.28.0--r42hdfd78af_0
-nextflow run -c 'conf/seattlechildrens.config' \
-    nf-core/rnaseq \
-    -r 3.14.0 \
-    -profile test,PBS_singularity \
-    --max_memory 32.GB \
-    --outdir "/home/$USER/temp/nf-core-rnaseq-test" \
-    --project "207f23bf-acb6-4835-8bfe-142436acb58c" \
-    --validationSchemaIgnoreParams 'queue,project'
-```
-
-```bash
 nextflow run -c 'conf/seattlechildrens.config' \
     nf-core/fetchngs \
     -r 1.12.0 \
@@ -52,7 +30,6 @@ nextflow run -c 'conf/seattlechildrens.config' \
     --project "207f23bf-acb6-4835-8bfe-142436acb58c" \
     --outdir "/home/$USER/temp/nf-core-fetchngs"
 ```
-
 
 
 ### Change log
