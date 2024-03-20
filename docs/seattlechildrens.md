@@ -41,12 +41,16 @@ Make sure that channel priority is set to flexible using the following comments:
 > mamba env create -f nextflow.yaml
 ```
 
-4. Running 
+4. Running in HPC (Cybertron)
+
 Please look into [RSC-RP/nextflow_scri_config](https://github.com/RSC-RP/nextflow_scri_config) for details.
 
-```
+```bash
 # activate conda/mamba env
 mamba activate nextflow
+
+# to list all the projects with project codes you are authorized on HPC
+project info
 
 # running nextflow pipeline example (please replace with your own project code and module)
 nextflow run -c 'conf/seattlechildrens.config' \
