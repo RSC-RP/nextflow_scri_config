@@ -46,8 +46,9 @@ Make sure that channel priority is set to flexible using the following comments:
 Please look into [RSC-RP/nextflow_scri_config](https://github.com/RSC-RP/nextflow_scri_config) for details.
 
 ```bash
-# activate conda or mamba enviornment
+# activate enviornment
 mamba activate nextflow
+module load singularity
 
 # to list all the projects with project codes you are authorized on HPC
 project info
