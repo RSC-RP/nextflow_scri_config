@@ -46,13 +46,13 @@ Make sure that channel priority is set to flexible using the following comments:
 Please look into [RSC-RP/nextflow_scri_config](https://github.com/RSC-RP/nextflow_scri_config) for details.
 
 ```bash
-# activate conda/mamba env
+# activate conda or mamba enviornment
 mamba activate nextflow
 
 # to list all the projects with project codes you are authorized on HPC
 project info
 
-# running nextflow pipeline example (please replace with your own project code and module)
+# example to run nextflow pipeline (please replace with your own project code and module)
 nextflow run -c 'conf/seattlechildrens.config' \
     [nf-core/module_name] \
     -profile test,PBS_singularity \
