@@ -61,7 +61,7 @@ mamba activate nextflow
 sshare -o "Account,Partition%20"
 
 # example to run nextflow pipeline (please replace with your own association, module, and temp directory)
-nextflow run -c 'conf/seattlechildrens.config' \
+nextflow run \
     [nf-core/module_name] \
     -profile seattlechildrens \
     --assoc ["your_association_name"] \
