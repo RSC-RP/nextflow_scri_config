@@ -3,30 +3,30 @@ An SCRI nextflow profile for NF-Core for reference which is pulled to 'https://g
 
 ### Test the config file 
 
-Please note that `--assoc` parameter can be specified on the command line in `nextflow run` or in the `seattlechildrens.config`. 
+Please note that `--assoc` parameter can be specified on the command line in `nextflow run` or in a params or config file. 
 
 ```bash
 mamba activate nextflow
 
-# For running on an interactive session on cybertron with singularity module loaded
-nextflow run -c 'conf/seattlechildrens.config' \
+# For running on an interactive session on sasquatch
+nextflow run \
     nf-core/rnaseq \
     -r 3.14.0 \
-    -profile test,sasquatch \
-    --outdir "/home/$USER/temp/nf-core-rnaseq-test" \
+    -profile seattlechildrens,test \
+    --outdir "/data/hps/assoc/private/rsc/user/$USER/nf-core-rnaseq-test" \
     --assoc "rsc" \
     --validationSchemaIgnoreParams 'assoc'
 ```
 
 ```bash
-nextflow run -c 'conf/seattlechildrens.config' \
+nextflow run \
     nf-core/fetchngs \
     -r 1.12.0 \
-    -profile test,sasquatch \
+    -profile seattlechildrens,test \
     --input ./ids.csv \
     --download_method 'sratools' \
     --assoc "rsc" \
-    --outdir "/home/$USER/fetchngs"
+    --outdir "/data/hps/assoc/private/rsc/user/$USER/fetchngs-test"
 ```
 
 ```
