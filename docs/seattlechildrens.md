@@ -4,6 +4,10 @@ All nf-core pipelines have been successfully configured for use on the the Sasqu
 
 To use, run the pipeline with `-profile seattlechildrens`. This will download and launch the pipeline using [`seattlechildrens.config`](../conf/seattlechildrens.config) which has been pre-configured with a setup suitable for the Sasquatch cluster at SCRI.
 
+This profile assumes that you will use the `cpu-core-sponsored` partition.  If you need to use `gpu-core-sponsored` for some steps, you can get in touch with Research Scientific Computing on Teams or email about how to modify the pipeline.
+
+We also maintain a [webpage about Nextflow](http://gonzo/hpcGuide/Nextflow.html) within the Seattle Children's intranet.
+
 # Project info
 
 This config file is created for the use on the Sasquatch HPC at Seattle Children Research Institude (SCRI), Seattle, WA. Using this config will pre-configure a set up suitable for the Sasquatch HPC. The Singularity images will be downloaded to run on the cluster. The nextflow pipeline should be executed inside of the Sasquatch system.
@@ -59,7 +63,7 @@ sshare -o "Account,Partition%20"
 # example to run nextflow pipeline (please replace with your own association, module, and temp directory)
 nextflow run -c 'conf/seattlechildrens.config' \
     [nf-core/module_name] \
-    -profile sasquatch \
+    -profile seattlechildrens \
     --assoc ["your_association_name"] \
     -workDir /data/hps/assoc/private/mylab/user/mmouse/temp_rnaseq \
 ```
