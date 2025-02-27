@@ -1,10 +1,10 @@
-# nf-core/configs: PROFILE Configuration
+# nf-core/configs: Seattle Children's Research Institute Configuration
 
 All nf-core pipelines have been successfully configured for use on the the Sasquatch HPC at Seattle Children Research Institude (SCRI), Seattle, WA.
 
 To use, run the pipeline with `-profile seattlechildrens`. This will download and launch the pipeline using [`seattlechildrens.config`](../conf/seattlechildrens.config) which has been pre-configured with a setup suitable for the Sasquatch cluster at SCRI.
 
-This profile assumes that you will use the `cpu-core-sponsored` partition.  If you need to use `gpu-core-sponsored` for some steps, you can get in touch with Research Scientific Computing on Teams or email about how to modify the pipeline.
+This profile assumes that you will use the `cpu-core-sponsored` partition. If you need to use `gpu-core-sponsored` for some steps, you can get in touch with Research Scientific Computing on Teams or email about how to modify the pipeline.
 
 We also maintain a [webpage about Nextflow](http://gonzo/hpcGuide/Nextflow.html) within the Seattle Children's intranet.
 
@@ -60,11 +60,13 @@ mamba activate nextflow
 # To list all the accounts you are authorized on HPC. For example if you have an account cpu-mylab-sponsored, your association is "mylab".
 sshare -o "Account,Partition%20"
 
+# Set your association as an environmental variable
+export ASSOC="your_association_name"
+
 # example to run nextflow pipeline (please replace with your own association, module, and temp directory)
-nextflow run -c 'conf/seattlechildrens.config' \
+nextflow run \
     [nf-core/module_name] \
     -profile seattlechildrens \
-    --assoc ["your_association_name"] \
     -workDir /data/hps/assoc/private/mylab/user/mmouse/temp_rnaseq \
 ```
 

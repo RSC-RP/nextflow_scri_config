@@ -8,25 +8,28 @@ Please note that `--assoc` parameter can be specified on the command line in `ne
 ```bash
 mamba activate nextflow
 
+export ASSOC="rsc"
+
 # For running on an interactive session on sasquatch
 nextflow run \
     nf-core/rnaseq \
     -r 3.14.0 \
     -profile seattlechildrens,test \
     --outdir "/data/hps/assoc/private/rsc/user/$USER/nf-core-rnaseq-test" \
-    --assoc "rsc" \
-    --validationSchemaIgnoreParams 'assoc'
+    -workDir "/data/hps/assoc/private/rsc/user/$USER/nf-core-rnaseq-test-temp"
 ```
 
 ```bash
+export ASSOC="rsc"
+
 nextflow run \
     nf-core/fetchngs \
     -r 1.12.0 \
     -profile seattlechildrens,test \
     --input ./ids.csv \
     --download_method 'sratools' \
-    --assoc "rsc" \
-    --outdir "/data/hps/assoc/private/rsc/user/$USER/fetchngs-test"
+    --outdir "/data/hps/assoc/private/rsc/user/$USER/fetchngs-test" \
+    -workDir "/data/hps/assoc/private/rsc/user/$USER/fetchngs-test-temp"
 ```
 
 ```
