@@ -16,7 +16,7 @@ nextflow run \
     -r 3.14.0 \
     -profile seattlechildrens,test \
     --outdir "/data/hps/assoc/private/rsc/user/$USER/nf-core-rnaseq-test" \
-    -workDir "/data/hps/assoc/private/rsc/user/$USER/nf-core-rnaseq-test-temp"
+    -work-dir "/data/hps/assoc/private/rsc/user/$USER/nf-core-rnaseq-test-temp"
 ```
 
 ```bash
@@ -29,7 +29,7 @@ nextflow run \
     --input ./ids.csv \
     --download_method 'sratools' \
     --outdir "/data/hps/assoc/private/rsc/user/$USER/fetchngs-test" \
-    -workDir "/data/hps/assoc/private/rsc/user/$USER/fetchngs-test-temp"
+    -work-dir "/data/hps/assoc/private/rsc/user/$USER/fetchngs-test-temp"
 ```
 
 ```
