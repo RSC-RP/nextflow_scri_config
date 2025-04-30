@@ -3,7 +3,7 @@ An SCRI nextflow profile for NF-Core for reference which is pulled to 'https://g
 
 ### Test the config file 
 
-Please note that `--assoc` parameter can be specified on the command line in `nextflow run` or in a params or config file. 
+Unlike with our local "sasquatch.config" file, we must specify the association with an environmental variable rather than as a parameter.
 
 ```bash
 mamba activate nextflow
