@@ -67,7 +67,7 @@ export ASSOC="your_association_name"
 nextflow run \
     [nf-core/module_name] \
     -profile seattlechildrens \
-    -workDir /data/hps/assoc/private/mylab/user/mmouse/temp_rnaseq \
+    -work-dir /data/hps/assoc/private/mylab/user/mmouse/temp_rnaseq \
 ```
 
 You can find more information about computational resources [here](https:#child.seattlechildrens.org/research/center_support_services/research_informatics/research_scientific_computing/high_performance_computing_core/). You have to be an employee of SCRI to access the link.
