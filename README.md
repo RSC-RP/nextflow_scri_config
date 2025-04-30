@@ -40,7 +40,10 @@ nf-core launch nf-core/methylseq -r 2.6.0
 
 ### Change log
 
+`2025.04.30` Minor touchups and draft config for `process_gpu`.
+
 `2025.02.21` Preliminary updates for Sasquatch.
+
 `2023.03.18` Built during nf-core biohackathon which synced for Cybertron and PBS. 
 
 
