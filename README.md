@@ -1,4 +1,5 @@
 # nextflow_scri_config
+
 An SCRI nextflow profile for NF-Core for reference which is pulled to 'https://github.com/nf-core/configs/blob/master/conf/seattlechildrens.config'.
 
 ### Test the config file 
@@ -39,6 +40,8 @@ nf-core launch nf-core/methylseq -r 2.6.0
 
 
 ### Change log
+
+`2025.10.22` Updates to account and partition naming system.
 
 `2025.04.30` Minor touchups and draft config for `process_gpu`.
 
