@@ -18,7 +18,7 @@ Before running the pipeline you will need to create a Nextflow environment on `m
 
 ## Create a Nextflow `mamba` environment
 
-1. Create _nextflow.yml_ file containing the following content. This YAML file can be utilized to set up a mamba environment, specifying both the version of Nextflow and the environment name.
+1. Create _nextflow.yml_ file containing the following content. This YAML file can be utilized to set up a mamba environment, specifying both the version of Nextflow and the environment name. Feel free to update the version numbers if newer versions are available.
 
 ```yaml
 name: nextflow
@@ -27,8 +27,8 @@ channels:
   - conda-forge
 dependencies:
   - python>=3.9
-  - nextflow==24.10.4
-  - nf-core==3.2.0
+  - nextflow==25.04.8
+  - nf-core==3.4.1
   - graphviz
 ```
 
