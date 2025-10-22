@@ -4,7 +4,9 @@ All nf-core pipelines have been successfully configured for use on the the Sasqu
 
 To use, run the pipeline with `-profile seattlechildrens`. This will download and launch the pipeline using [`seattlechildrens.config`](../conf/seattlechildrens.config) which has been pre-configured with a setup suitable for the Sasquatch cluster at SCRI.
 
-This profile assumes that you will use the `cpu-core-sponsored` partition, unless a process has the label `process_gpu` in which case `gpu-core-sponsored` will be used. Given that GPU usage is a fairly new feature in nf-core pipelines, if you run into issues you can get in touch with Research Scientific Computing on Teams or email about how to modify the pipeline.
+This profile assumes that you will use the `cpu-core` partition, unless a process has the label `process_gpu` in which case `gpu-core` will be used. Given that GPU usage is a fairly new feature in nf-core pipelines, if you run into issues you can get in touch with Research Scientific Computing on Teams or email about how to modify the pipeline.
+
+This profile also assumes that you have an association. If you want to run Nextflow using the `core` account, please contact Research Scientific Computing.
 
 We also maintain a [webpage about Nextflow](http://gonzo/hpcGuide/Nextflow.html) within the Seattle Children's intranet.
 
